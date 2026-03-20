@@ -1,4 +1,4 @@
-
+ 
         /* =============================================
            Theme Toggle
         ============================================= */
@@ -49,7 +49,7 @@
         const sliderTrack = document.getElementById('slider-track');
         const dots = document.querySelectorAll('.slider-dots .dot');
         let currentSlide = 0;
-        const totalSlides = 2;
+        const totalSlides = 3;
         const pauseDuration = 4000; // ms on each slide
 
         // Sync dots with CSS animation
@@ -67,7 +67,7 @@
                 const idx = parseInt(dot.dataset.slide);
                 currentSlide = idx;
                 sliderTrack.style.animation = 'none';
-                sliderTrack.style.transform = `translateX(-${idx * 50}%)`;
+                sliderTrack.style.transform = `translateX(-${idx * (100 / totalSlides)}%)`;
                 dots.forEach((d, i) => d.classList.toggle('active', i === idx));
 
                 // Resume auto-play after a pause

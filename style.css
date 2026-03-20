@@ -300,14 +300,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo-box img {
   width: 230px;
-    height: 230px;
+    height: auto;
+    margin-top: 20px;
+    object-fit: cover;
+    max-width:100%;
+
+
 
 }
 
 @media (max-width: 768px) {
   .logo-box img {
-    width: 920px;
-    height: 190px;
+   width: 150px;
+    height:134px;
+     margin-bottom:9.5px;
+    object-fit: cover;
+    max-width:100%;
+
+
   }
 }
 

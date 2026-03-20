@@ -1,4 +1,4 @@
-  .awards-hero-slider {
+   .awards-hero-slider {
             position: relative;
             width: 100vw;
             height: 85vh;
@@ -20,9 +20,9 @@
 
         .slider-track {
             display: flex;
-            width: 200%;
-            height: 230%;
-            animation: slideAuto 8s ease-in-out infinite;
+            width: 300%;
+            height: 100%;
+            animation: slideAuto 12s ease-in-out infinite;
         }
 
 
@@ -30,14 +30,14 @@
 @media (max-width: 768px) {
   .slider-track{
     display: flex;
-            width: 200%;
+            width: 300%;
             height: 100%;
-            animation: slideAuto 8s ease-in-out infinite;
+            animation: slideAuto 12s ease-in-out infinite;
   }
 }
 
         .slider-slide {
-            width: 50%;
+            width: 33.3333%;
             height: 100%;
             position: relative;
             flex-shrink: 0;
@@ -141,16 +141,24 @@
                 transform: translateX(0);
             }
 
-            40% {
+            28% {
                 transform: translateX(0);
             }
 
-            50% {
-                transform: translateX(-50%);
+            33.33% {
+                transform: translateX(-33.3333%);
             }
 
-            90% {
-                transform: translateX(-50%);
+            61% {
+                transform: translateX(-33.3333%);
+            }
+
+            66.66% {
+                transform: translateX(-66.6666%);
+            }
+
+            94% {
+                transform: translateX(-66.6666%);
             }
 
             100% {
