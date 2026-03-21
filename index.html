@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png"   href="icon.png">
+    <link rel="icon" type="image/png" href="icon.png">
 
     <title> Manoj Associates </title>
     <meta name="description"
@@ -978,7 +978,11 @@
                         </div>
                         <div class="direct-item">
                             <span class="direct-label">Call Us Directly</span>
-                            <a href="tel:9415005550 " class="direct-link">+91 94150 - 05550</a>
+                            <a href="tel:9415005550 " class="direct-link"> <button type="submit"
+                                    class="btn btn-primary">
+                                    CALL NOW
+                                </button>
+                            </a>
                         </div>
                         <div class="direct-item">
                             <span class="direct-label">Corporate Office</span>
@@ -990,84 +994,75 @@
                     </div>
                 </div>
 
-                <!-- <div class="contact-right">
-                    <form id="contactForm" class="sleek-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" placeholder="John Doe" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Company</label>
-                                <input type="text" id="company" name="company" placeholder="Organization">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="john@company.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
-                            </div>
+
+
+                <!-- EmailJS CDN -->
+ <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+ <script>
+                    (function () {
+                        emailjs.init("NOXZ5QC3sRMAldKmg");
+                    })();</script>
+
+                <form id="contactForm" class="sleek-form">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" name="name" placeholder="John Doe" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea id="message" name="message" rows="5"
-                                placeholder="Tell us about the scope of your infrastructure needs..."
-                                required></textarea>
+                            <label>Company</label>
+                            <input type="text" name="company" placeholder="Organization">
                         </div>
-                        <button type="submit" class="btn btn-primary btn-submit">SUBMIT INQUIRY <i
-                                class="fa-solid fa-arrow-right"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div> -->
+                    </div>
 
-
-                <div class="contact-right">
-                    <form action="https://formsubmit.co/ambujxujjwal@gmail.com" method="POST" class="sleek-form">
-
-                        <!-- Hidden Settings -->
-                        <input type="hidden" name="_subject" value="New Inquiry from Manoj Associates Website">
-                        <input type="hidden" name="_captcha" value="false">
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" placeholder="John Doe" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Company</label>
-                                <input type="text" name="company" placeholder="Organization">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" placeholder="john@company.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX">
-                            </div>
-                        </div>
-
+                    <div class="form-row">
                         <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea name="message" rows="5"
-                                placeholder="Tell us about the scope of your infrastructure needs..."
-                                required></textarea>
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="john@company.com" required>
                         </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX">
+                        </div>
+                    </div>
 
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            SUBMIT INQUIRY <i class="fa-solid fa-arrow-right"></i>
-                        </button>
+                    <div class="form-group">
+                        <label>Project Details</label>
+                        <textarea name="message" rows="5" required></textarea>
+                    </div>
 
-                    </form>
-                </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        SUBMIT INQUIRY
+                    </button>
+
+                </form>
+
+
+                <script>
+                    document.getElementById("contactForm").addEventListener("submit", function (e) {
+                        e.preventDefault();
+
+                        emailjs.sendForm(
+                            "service_l84q1yf",   // yaha service ID
+                            "template_kxg3h5l",  // yaha template ID
+                            this
+                        )
+                            .then(function () {
+                                alert("✅ Inquiry Sent Successfully!");
+                            }, function (error) {
+                                alert("❌ Failed to send!");
+                                console.log(error);
+                            });
+
+                        this.reset();
+                    });
+
+                </script>
+                
+
+
+
 
 
     </section>
